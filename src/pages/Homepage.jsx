@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar";
 import "../Css/Home.css";
 
@@ -15,8 +15,12 @@ function Homepage() {
             </h1>
             <p>My own version of facebook</p>
             <div className="hero-section-btns">
-              <button className="hero-btn hero-btn-login">Log In</button>
-              <button className="hero-btn hero-btn-create">Create+</button>
+              <Link to={"profiles"}>
+                <button className="hero-btn hero-btn-login">Log In</button>
+              </Link>
+              <Link to={"create"}>
+                <button className="hero-btn hero-btn-create">Create+</button>
+              </Link>
             </div>
           </div>
           <div className="hero-banner">

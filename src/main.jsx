@@ -6,14 +6,14 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import { getProfiles } from "./pages/Profile-detail";
+import { getProfiles } from "./Components/Profile_Detail";
 
 //Pages
 import Homepage from "./pages/Homepage";
 import CreateProfile from "./pages/Create";
 import Profilepage from "./pages/Profiles-page";
 import ErrorPage from "./pages/Error-page";
-import { ProfileDetail } from "./pages/Profile-detail";
+import ProfileDetail from "./pages/Profile-detail";
 
 /* import { getUserLoader } from "./Components/Profiles"; */
 
