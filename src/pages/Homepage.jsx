@@ -13,10 +13,13 @@ function Homepage() {
               Hi<span className="hero-section-wave">👋</span>, Welcome to
               Profile
             </h1>
-            <p>My own version of facebook</p>
+            <p>
+              My own version of facebook, instagram, tweeter and aaaah okey what
+              I am trying to say that it's fun and cool.
+            </p>
             <div className="hero-section-btns">
               <Link to={"profiles"}>
-                <button className="hero-btn hero-btn-login">Log In</button>
+                <button className="hero-btn hero-btn-profiles">Profiles</button>
               </Link>
               <Link to={"create"}>
                 <button className="hero-btn hero-btn-create">Create+</button>

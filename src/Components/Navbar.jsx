@@ -5,7 +5,10 @@ export default function Navbar() {
   return (
     <>
       <header className="header">
-        <h2>Profile</h2>
+        <Link to={"/"} className="nav-bar-home">
+          <h2>Profile</h2>
+        </Link>
+
         <nav>
           <ul className="nav-bar-list">
             <li className="nav-bar-item">

@@ -1,11 +1,14 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import "../Css/Profile_Detail.css";
 
+/* Fetch data using loader */
 export async function getProfiles() {
   const res = await fetch("http://localhost/Php-server/api.php");
   const data = await res.json();
   return data;
 }
+
+/* Individual profile */
 export function Profile_Detail() {
   const { id } = useParams();
   const profiles = useLoaderData();
@@ -17,6 +20,7 @@ export function Profile_Detail() {
             return (
               <div key={person.id} className="profile-card">
                 <div className="profile-cover-overlay"></div>
+                {/* Cover picture */}
                 <div className="profile-cover">
                   <img
                     src={`http://localhost/Php-server${person.image}`}
@@ -24,12 +28,16 @@ export function Profile_Detail() {
                     className="profile-cover-pic"
                   />
                 </div>
+
+                {/* Profile container */}
                 <div className="profile-details">
+                  {/* Profile picture */}
                   <img
                     src={`http://localhost/Php-server${person.image}`}
                     alt="profile"
                     className="profile-pic"
                   />
+                  {/* Profile details */}
                   <div className="profile-text">
                     <p className="profile-name">
                       {person.first_name} {person.last_name}

@@ -39,14 +39,13 @@ export default function Body() {
         action="/create"
         method="post"
         className="form"
-        target="blank"
         encType="multipart/form-data"
       >
-        {/* <img
+        <img
           src="src\assets\icons8-ios-photos.svg"
           alt="gallery-icon"
           className="gallery-icon"
-        /> */}
+        />
 
         {/* First name input */}
         <div>
@@ -104,7 +103,7 @@ export default function Body() {
 
         {/* Profic pic input */}
         <div>
-          <input type="file" name="profile-pic" id="" accept="image/*" />
+          <input type="file" name="profile_pic" id="" accept="image/*" />
         </div>
 
         {/* Submit data to backend */}
