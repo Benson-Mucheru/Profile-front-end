@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import Navbar from "../Components/Navbar";
+
 import "../Css/Home.css";
 
 function Homepage() {
   return (
     <>
-      <Navbar />
       <div className="container">
         <div className="hero">
           <div className="hero-section">
@@ -18,8 +17,8 @@ function Homepage() {
               I am trying to say that it's fun and cool.
             </p>
             <div className="hero-section-btns">
-              <Link to={"profiles"}>
-                <button className="hero-btn hero-btn-profiles">Profiles</button>
+              <Link to={"login"}>
+                <button className="hero-btn hero-btn-profiles">Login</button>
               </Link>
               <Link to={"create"}>
                 <button className="hero-btn hero-btn-create">Create+</button>

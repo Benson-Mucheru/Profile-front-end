@@ -8,6 +8,7 @@ export default function Body() {
   const [lastName, setLastName] = useState("");
   const [age, setAge] = useState("");
   const [bio, setBio] = useState("");
+  const [password, setPassword] = useState("");
 
   //handleFirstNameChange
   function handleFirstName(e) {
@@ -29,6 +30,10 @@ export default function Body() {
     setBio(e.target.value);
   }
 
+  //handlePassword
+  function handlePassword(e) {
+    setPassword(e.target.value);
+  }
   //stopProgation
   function handleSubmit(e) {
     e.stopPropagation();
@@ -49,33 +54,34 @@ export default function Body() {
 
         {/* First name input */}
         <div>
-          <label htmlFor="first_name">First Name: </label>
           <input
             type="text"
             name="first_name"
             id=""
             value={fisrtName}
             onChange={handleFirstName}
+            className="create-input"
+            placeholder="First Name"
           />
         </div>
         <br />
 
         {/* Last name input */}
         <div>
-          <label htmlFor="last_name">Last Name: </label>
           <input
             type="text"
             name="last_name"
             id=""
             value={lastName}
             onChange={handleLastName}
+            className="create-input"
+            placeholder="Second Name"
           />
         </div>
         <br />
 
         {/* Age input */}
         <div>
-          <label htmlFor="age">Age: </label>
           <input
             type="number"
             name="age"
@@ -83,13 +89,14 @@ export default function Body() {
             value={age}
             onChange={handleAge}
             max={100}
+            className="create-input"
+            placeholder="Age"
           />
         </div>
         <br />
 
         {/* Bio input */}
         <div>
-          <label htmlFor="bio">Bio: </label>
           <textarea
             name="bio"
             id=""
@@ -101,9 +108,26 @@ export default function Body() {
         </div>
         <br />
 
+        {/* Password input */}
+        <div>
+          <input
+            type="password"
+            name="password"
+            className="create-input password"
+            placeholder="Password"
+            value={password}
+            onChange={handlePassword}
+          />
+        </div>
+
         {/* Profic pic input */}
         <div>
-          <input type="file" name="profile_pic" id="" accept="image/*" />
+          <input
+            type="file"
+            name="profile_pic"
+            className="create-file"
+            accept="image/*"
+          />
         </div>
 
         {/* Submit data to backend */}
