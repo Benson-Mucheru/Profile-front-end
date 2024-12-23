@@ -1,15 +1,31 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import "../Css/Navbar.css";
-import { useState } from "react";
+
 
 
 export default function Navbar() {
-  const {isActive, setIsActive} = useState("nothing");
+  /* const [isOpenMenuBtn, setIsOpenMenuBtn] = useState("nav-mobile-open");
+  const [isClosedMenuBt, setIsClosedMenuBtn] = useState("nav-mobile-close") */
+
   function onClick () {
-    /* const navMobile = document.querySelector(".nav-mobile"); */
-    setIsActive("something");
-    console.log(navMobile)
+     const openMenuBtn = "nav-mobile-open";
+     const closeMenuBtn = "nav-mobile-close";
+     const navMobile = document.querySelector(".nav-mobile"); 
+     //navMobile.classList.toggle(openMenuBtn);
+     
+     if(!navMobile.classList.contains(closeMenuBtn)){
+      navMobile.classList.add(closeMenuBtn);
+     navMobile.classList.remove(openMenuBtn); 
+     }else{
+      navMobile.classList.add(openMenuBtn);
+      navMobile.classList.remove(closeMenuBtn);
+     }
+      
+     
+     
+     console.log(navMobile)
   }
   return (
     <>
@@ -40,11 +56,12 @@ export default function Navbar() {
         </nav>
         {/* Humbergur Icon */}
 
+
         <button type="button" className="humbegur-icon" onClick={onClick}> <img src="src\assets\hamburger-menu-icon.svg" alt="humbergur icon" /> </button>
         
       </header>
       {/* Tablet & Mobile nav */}
-      <nav className="nav-mobile">
+      <nav className="nav-mobile nav-mobile-close">
           <ul className="nav-bar-list-mobile">
             <li className="nav-bar-item-mobile">
               <NavLink to={"login"} className="nav-bar-link-mobile">
