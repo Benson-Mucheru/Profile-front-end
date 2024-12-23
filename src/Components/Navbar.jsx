@@ -9,7 +9,8 @@ export default function Navbar() {
           <h2>Profile</h2>
         </NavLink>
 
-        <nav>
+        {/* Desktop navigation */}
+        <nav className="nav-desktop">
           <ul className="nav-bar-list">
             <li className="nav-bar-item">
               <NavLink to={"login"} className="nav-bar-link">
@@ -28,7 +29,31 @@ export default function Navbar() {
             </li>
           </ul>
         </nav>
+        {/* Humbergur Icon */}
+
+        <button type="button" className="humbegur-icon">icon</button>
+        
       </header>
+      {/* Tablet & Mobile nav */}
+      <nav className="nav-mobile">
+          <ul className="nav-bar-list-mobile">
+            <li className="nav-bar-item-mobile">
+              <NavLink to={"login"} className="nav-bar-link-mobile">
+                Login
+              </NavLink>
+            </li>
+            <li className="nav-bar-item-mobile">
+              <NavLink to={"create"} className="nav-bar-link-mobile">
+                Create
+              </NavLink>
+            </li>
+            <li className="nav-bar-item-mobile">
+              <NavLink to={"profiles"} className="nav-bar-link-mobile">
+                Profiles
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
     </>
   );
 }

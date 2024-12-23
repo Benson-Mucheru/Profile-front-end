@@ -3,23 +3,19 @@
   --yellow-ish: rgba(255, 255, 0, 0.904);
 }
 .container {
-  /* background-image: radial-gradient(
-    rgba(187, 255, 0, 0.829),
-    rgba(255, 255, 0, 0.781),
-    rgba(255, 255, 0, 0.904)
-  ); */
+  margin-inline: 4rem;
 }
 .hero {
   display: flex;
   justify-content: space-between;
   padding-block-start: 1rem;
   gap: 2rem;
-  max-width: 80%;
+ 
   margin: 0 auto;
 }
 
 .hero-section {
-  max-width: 40%;
+  max-width: 50%;
 }
 
 .hero-section h1 {
@@ -63,33 +59,14 @@
 }
 
 .hero-banner {
-  /* max-width: 100%; */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-columns: max-content;
-  gap: 1rem;
-
-  background-color: rgb(102, 255, 0);
-  padding: 1rem;
-  border-top-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  max-width: 50%;
 }
 
-.hero-banner img {
-  width: 200px;
+.hero-banner img{
   max-width: 100%;
-  border-radius: 10px;
 }
 
-.hero-banner img:nth-child(5) {
-  position: relative;
-  bottom: 3rem;
-}
 
-.hero-banner img:nth-child(6) {
-  position: relative;
-  bottom: 5.5rem;
-}
 
 @keyframes wave {
   to {
