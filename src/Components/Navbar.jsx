@@ -1,7 +1,16 @@
 import { NavLink } from "react-router-dom";
 
 import "../Css/Navbar.css";
+import { useState } from "react";
+
+
 export default function Navbar() {
+  const {isActive, setIsActive} = useState("nothing");
+  function onClick () {
+    /* const navMobile = document.querySelector(".nav-mobile"); */
+    setIsActive("something");
+    console.log(navMobile)
+  }
   return (
     <>
       <header className="header">
@@ -31,7 +40,7 @@ export default function Navbar() {
         </nav>
         {/* Humbergur Icon */}
 
-        <button type="button" className="humbegur-icon">icon</button>
+        <button type="button" className="humbegur-icon" onClick={onClick}> <img src="src\assets\hamburger-menu-icon.svg" alt="humbergur icon" /> </button>
         
       </header>
       {/* Tablet & Mobile nav */}

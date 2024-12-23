@@ -4,20 +4,14 @@ import { Form } from "react-router-dom";
 import "../Css/Body.css";
 export default function Body() {
   //States
-  const [fisrtName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [userName, setUserName] = useState("");
   const [age, setAge] = useState("");
   const [bio, setBio] = useState("");
   const [password, setPassword] = useState("");
 
-  //handleFirstNameChange
-  function handleFirstName(e) {
-    setFirstName(e.target.value);
-  }
-
-  //handleLastNameChange
-  function handleLastName(e) {
-    setLastName(e.target.value);
+  //handleUserNameChange
+  function handleUserName(e) {
+    setUserName(e.target.value);
   }
 
   //handleAgeChang
@@ -40,8 +34,8 @@ export default function Body() {
   }
   return (
     <section className="signup-section">
-      <Form
-        action="/create"
+      <form
+        action="http://localhost/profiles/api.php"
         method="post"
         className="form"
         encType="multipart/form-data"
@@ -52,30 +46,16 @@ export default function Body() {
           className="gallery-icon"
         />
 
-        {/* First name input */}
+        {/* User name input */}
         <div>
           <input
             type="text"
-            name="first_name"
+            name="username"
             id=""
-            value={fisrtName}
-            onChange={handleFirstName}
+            value={userName}
+            onChange={handleUserName}
             className="create-input"
-            placeholder="First Name"
-          />
-        </div>
-        <br />
-
-        {/* Last name input */}
-        <div>
-          <input
-            type="text"
-            name="last_name"
-            id=""
-            value={lastName}
-            onChange={handleLastName}
-            className="create-input"
-            placeholder="Second Name"
+            placeholder="User Name"
           />
         </div>
         <br />
@@ -134,7 +114,7 @@ export default function Body() {
         <button className="btn-create" type="submit" onSubmit={handleSubmit}>
           Create
         </button>
-      </Form>
+      </form>
     </section>
   );
 }

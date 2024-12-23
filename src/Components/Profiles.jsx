@@ -17,7 +17,7 @@ export default function Profile() {
             >
               <div className="profile-detail">
                 <img
-                  src={`http://localhost/Php-server${person.image}`}
+                  src={`http://localhost/profiles${person.image}`}
                   alt="profile"
                   className="profile-detail-pic"
                 />

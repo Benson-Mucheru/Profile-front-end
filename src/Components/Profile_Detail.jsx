@@ -3,7 +3,7 @@ import "../Css/Profile_Detail.css";
 
 /* Fetch data using loader */
 export async function getProfiles() {
-  const res = await fetch("http://localhost/Php-server/api.php");
+  const res = await fetch("http://localhost/profiles/api.php");
   const data = await res.json();
   return data;
 }
@@ -23,7 +23,7 @@ export function Profile_Detail() {
                 {/* Cover picture */}
                 <div className="profile-cover">
                   <img
-                    src={`http://localhost/Php-server${person.image}`}
+                    src={`http://localhost/profiles${person.image}`}
                     alt="cover picture"
                     className="profile-cover-pic"
                   />
@@ -33,7 +33,7 @@ export function Profile_Detail() {
                 <div className="profile-details">
                   {/* Profile picture */}
                   <img
-                    src={`http://localhost/Php-server${person.image}`}
+                    src={`http://localhost/profiles${person.image}`}
                     alt="profile"
                     className="profile-pic"
                   />

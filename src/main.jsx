@@ -53,14 +53,16 @@ const router = createBrowserRouter([
         action: async ({ request, params }) => {
           const formData = await request.formData();
 
-          await fetch("http://localhost/Php-server/api.php", {
+          await fetch("http://localhost/profiles/api.php", {
             method: "post",
             headers: {
-              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin" : "*",
+              "Content-Type": "application/json",      
             },
             mode: "no-cors",
             body: formData,
           });
+          console.log(formData)
           return redirect("/profiles");
         },
       },
@@ -70,7 +72,7 @@ const router = createBrowserRouter([
         element: <Profilepage />,
         /* Fetch data from the database */
         loader: async () => {
-          const res = await fetch("http://localhost/Php-server/api.php");
+          const res = await fetch("http://localhost/profiles/api.php");
           const data = await res.json();
           return data;
         },

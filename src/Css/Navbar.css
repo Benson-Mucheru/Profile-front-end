@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden;
+}
 :root {
   --green-ish: rgb(102, 255, 0);
   --yellow-ish: rgba(255, 255, 0, 0.904);
@@ -16,6 +19,7 @@
   top: 0;
   z-index: 3;
   border-radius: 50px;
+ 
 }
 
 .nav-bar-list {
@@ -43,15 +47,16 @@
 .nav-mobile{
   border: 1px black solid;
   position: absolute;
-  top: 5rem;
-  right: 3rem;
-  border-radius: 10px;
+  top: 4.25rem;
+  right: -10rem;
   padding: 1rem;
   width: 20%;
   min-height: 88vh;
   background-color: var(--green-ish);
   filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.452)) opacity(95%) ;
-  display: none;
+  transform: translateX(6rem);
+  
+  /* display: none; */
 }
 
 .nav-bar-list-mobile{
@@ -67,7 +72,12 @@
 
 /* Humbergur Icon */
 .humbegur-icon{
-  display: none;
+  background: none;
+  border: none;
+}
+.humbegur-icon img{
+  width: 20px;
+
 }
 
 @media screen and (max-width: 750px) {
